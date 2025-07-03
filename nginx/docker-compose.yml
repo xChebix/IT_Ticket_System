@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  nginx:
+    image: nginx:latest
+    container_name: nginx-proxy
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./conf.d:/etc/nginx/conf.d
+      - ./ssl:/etc/nginx/ssl
+      - ./logs:/var/log/nginx
+    networks:
+      - elk  # Shares the same network as Zammad/Kibana
+
+# No need to redefine networks if they already exist
+networks:
+  elk:
+    name: docker-elk_elk
+    external: true
