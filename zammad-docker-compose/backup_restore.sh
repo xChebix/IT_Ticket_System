@@ -2,7 +2,7 @@
 # Restore latest .tar.gz backup for each Zammad Docker volume
 
 # Configuration
-BACKUP_DIR="/backups/zammad_volumes"
+BACKUP_DIR="$HOME/.backups/zammad_volumes"
 VOLUMES=(
     "zammad-docker-compose_elasticsearch-data"
     "zammad-docker-compose_postgresql-data"

@@ -3,7 +3,7 @@
 # Backs up all volumes with timestamp and compression
 
 # Configuration
-BACKUP_DIR="/backups/zammad_volumes"
+BACKUP_DIR="$HOME/.backups/zammad_volumes"
 LOG_FILE="$BACKUP_DIR/backup_$(date +%Y%m%d).log"
 VOLUMES=(
     "zammad-docker-compose_elasticsearch-data"
