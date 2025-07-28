@@ -1,4 +1,4 @@
 # .gitignore
 nginx/ssl
 nginx/logs
-.env
+.env.dist

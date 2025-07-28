@@ -171,5 +171,6 @@ volumes:
 
 networks:
   elk:
-    name: docker-elk_elk
-    external: true
+    driver: bridge
+
+

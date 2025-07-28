@@ -18,5 +18,5 @@ services:
 # No need to redefine networks if they already exist
 networks:
   elk:
-    name: docker-elk_elk
+    name: zammad-docker-compose_elk
     external: true
